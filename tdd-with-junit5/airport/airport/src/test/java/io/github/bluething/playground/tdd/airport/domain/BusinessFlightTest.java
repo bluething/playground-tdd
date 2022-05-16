@@ -13,7 +13,8 @@ public class BusinessFlightTest {
         @DisplayName("Then we can't add them to an business flight")
         @Test
         public void addPassengerReturnFalse() {
-            
+            Passenger fulan = new Passenger("Fulan", false);
+            Flight businessFlight = new BusinessFlight("2");
         }
     }
 }
