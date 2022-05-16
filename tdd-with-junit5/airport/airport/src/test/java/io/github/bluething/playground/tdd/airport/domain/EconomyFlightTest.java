@@ -14,6 +14,7 @@ public class EconomyFlightTest {
         @Test
         public void addPassengerReturnTrue() {
             Passenger fulan = new Passenger("Fulan", false);
+            Flight ecomonyFlight = new EconomyFlight("1");
         }
     }
 }
