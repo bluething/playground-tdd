@@ -19,4 +19,14 @@ public class EconomyFlightTest {
             Assertions.assertTrue(economyFlight.addPassenger(fulan));
         }
     }
+
+    @DisplayName("When we have a VIP passenger")
+    @Nested
+    class VIPPassenger {
+        @DisplayName("Then we can add them to an economy flight")
+        @Test
+        public void addPassengerReturnTrue() {
+
+        }
+    }
 }
