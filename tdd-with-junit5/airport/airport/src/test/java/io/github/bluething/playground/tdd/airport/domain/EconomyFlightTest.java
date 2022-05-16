@@ -1,4 +1,4 @@
-package io.github.bluething.playground.tdd.airport;
+package io.github.bluething.playground.tdd.airport.domain;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

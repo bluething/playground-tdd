@@ -1,4 +1,4 @@
-package io.github.bluething.playground.tdd.airport.domain;
+package io.github.bluething.playground.tdd.airport.domain.domain;
 
 public class Passenger {
     private final String name;
