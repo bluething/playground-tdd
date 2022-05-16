@@ -1,5 +1,6 @@
 package io.github.bluething.playground.tdd.globomantics.infrastructure.product;
 
+import io.github.bluething.playground.tdd.globomantics.domain.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
