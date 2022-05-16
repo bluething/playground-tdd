@@ -26,7 +26,9 @@ public class EconomyFlightTest {
         @DisplayName("Then we can add them to an economy flight")
         @Test
         public void addPassengerReturnTrue() {
-
+            Passenger fulan = new Passenger("Fulan", true);
+            Flight economyFlight = new EconomyFlight("1");
+            Assertions.assertTrue(economyFlight.addPassenger(fulan));
         }
     }
 }
