@@ -23,7 +23,7 @@ public class BusinessFlightTest {
     @DisplayName("When we have a VIP passenger")
     @Nested
     class VIPPassenger {
-        @DisplayName("Then we can add them to an economy flight")
+        @DisplayName("Then we can add them to an business flight")
         @Test
         public void addPassengerReturnTrue() {
             Passenger fulan = new Passenger("Fulan", true);
