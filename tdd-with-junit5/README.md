@@ -1,0 +1,1 @@
+I rewrite sample code from [TDD with JUnit5 course](https://app.pluralsight.com/courses/a4fdbc3d-aade-4ea9-9c32-17c17615a5b5/table-of-contents) by [Catalin Tudose](https://ro.linkedin.com/in/catalin-tudose-847667a1)
