@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'io.github.bluething.tdd'
+group 'io.github.bluething.playground.tdd'
 version '1.0-SNAPSHOT'
 
 repositories {
