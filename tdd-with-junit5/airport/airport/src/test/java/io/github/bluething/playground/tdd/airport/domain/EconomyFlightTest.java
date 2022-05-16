@@ -1,5 +1,6 @@
 package io.github.bluething.playground.tdd.airport.domain;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class EconomyFlightTest {
         public void addPassengerReturnTrue() {
             Passenger fulan = new Passenger("Fulan", false);
             Flight ecomonyFlight = new EconomyFlight("1");
+            Assertions.assertTrue(ecomonyFlight.addPassenger(fulan));
         }
     }
 }
