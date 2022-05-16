@@ -1,0 +1,19 @@
+package io.github.bluething.playground.tdd.airport;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
+@DisplayName("Given there is an economy flight")
+@Nested
+public class EconomyFlightTest {
+    @DisplayName("When we have a usual passenger")
+    @Nested
+    class UsualPassenger {
+        @DisplayName("Then we can add them to an economy flight")
+        @Test
+        public void addPassengerReturnTrue() {
+
+        }
+    }
+}
