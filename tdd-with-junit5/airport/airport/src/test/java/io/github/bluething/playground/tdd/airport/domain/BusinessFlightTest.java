@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Given there is an business flight")
-@Nested
 public class BusinessFlightTest {
     @DisplayName("When we have a usual passenger")
     @Nested
