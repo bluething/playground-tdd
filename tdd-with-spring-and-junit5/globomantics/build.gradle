@@ -1,0 +1,59 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'io.github.bluething.playground.tdd'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+sourceSets {
+	integration {
+		java.srcDir file('src/test/integration/java')
+		resources.srcDir file('src/test/integration/resources')
+		compileClasspath += sourceSets.main.output
+		runtimeClasspath += sourceSets.main.output
+	}
+	unit {
+		java.srcDir file('src/test/unit/java')
+		resources.srcDir file('src/test/unit/resources')
+		compileClasspath += sourceSets.main.output
+		runtimeClasspath += sourceSets.main.output
+	}
+}
+configurations {
+	integrationImplementation.extendsFrom testImplementation
+	unitImplementation.extendsFrom testImplementation
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	unitImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	integrationImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+task integration(type: Test) {
+	testClassesDirs = sourceSets.integration.output.classesDirs
+	classpath = sourceSets.integration.runtimeClasspath
+	useJUnitPlatform()
+}
+task unit(type: Test) {
+	testClassesDirs = sourceSets.unit.output.classesDirs
+	classpath = sourceSets.unit.runtimeClasspath
+	useJUnitPlatform()
+}
